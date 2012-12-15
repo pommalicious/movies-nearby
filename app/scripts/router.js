@@ -1,3 +1,5 @@
+// As you may have surmised, this is the router for the app.
+// Initialized in main.js
 
 define(['movies'], function(Movies) {
 
