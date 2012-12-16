@@ -1,0 +1,50 @@
+// Dependencies
+@import "mixins";
+// For the title font
+@import url(http://fonts.googleapis.com/css?family=Fjalla+One);
+
+// Font base
+$title-font-family: 'Fjalla One', sans-serif;
+$normal-font: 1.4em;
+$large-font: 1.6em;
+
+// Colors
+$chrome-base: #dddddd;
+
+body {
+    position: relative;
+    font-family: Helvetica, sans-serif;
+    width: 100%;
+    font-size: 100%;
+}
+
+.container {
+    max-width: 960px;
+    margin: auto;
+}
+
+// Top chrome
+.chrome {
+    position: relative;
+    display: flex;
+    flex-flow: row;
+    font-size: $normal-font;
+    padding: .5em;
+
+    button {
+        position: relative;
+        @include chrome-button;
+    }
+
+    // TODO: FIX FLEXBOX STUFF
+
+    #maps-button {
+        order: 1;
+    }
+
+    #theater-button {
+        order: 2;
+        align-self: center;
+        width: 75%;
+    }
+}

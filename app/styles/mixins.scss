@@ -1,0 +1,48 @@
+@mixin border($r) {
+    -webkit-border-radius: $r;
+    -moz-border-radius: $r;
+    -o-border-radius: $r;
+    -ms-border-radius: $r;
+    border-radius: $r;
+}
+
+@mixin gradient($from, $to) {
+    /* default/fallback */
+    background-color: $from;
+ 
+    background-image: -webkit-gradient(linear, left top, left bottom, from($from), to($to));
+    background-image: -webkit-linear-gradient($from, $to);
+    background-image: -moz-linear-gradient($from, $to);
+    background-image: -o-linear-gradient($from, $to);
+    background-image: -ms-linear-gradient($from, $to);
+    background-image: linear-gradient($from, $to);
+}
+
+@mixin chrome-shadows {
+
+}
+
+@mixin chrome-button {
+    @include border(.1em);
+    background: $chrome-base;
+    //@include gradient(lighten($chrome-base, 5%), darken($chrome-base, 5%));
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    border-bottom: .25em solid darken($chrome-base, 10%);
+    font-family: $title-font-family;
+    font-size: $large-font;
+    padding: .5em;
+
+    &:hover {
+        background: lighten($chrome-base, 2%);
+        cursor: pointer;
+    }
+
+    &:active {
+        position: relative;
+        border-bottom-width: .05em;
+        top: .20em;
+    }
+
+}
