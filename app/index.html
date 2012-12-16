@@ -13,21 +13,18 @@
 
     </head>
     <body>
-    <div class="container">
-        <div class="hero-unit">
-            <h1>Cheerio!</h1>
-            <p>You now have</p>
-            <ul>
-                <li>HTML5 Boilerplate</li>
-                <li>jQuery</li>
-                <li>Backbone.js</li>
-                <li>Lodash</li>
-                <li>Mocha</li>
-            </ul>
-            <p>installed.</p>
-            <h3>Enjoy coding! - Yeoman</h3>
+        <div class="container">
+            <div class="chrome">
+                <button id="maps-button">Maps</button>
+                <button id="theater-button">Theater</button>
+            </div>
+            <div id="theater-list">
+            </div>
+            <div class="content">
+                <div id="results">
+                </div>
+            </div>
         </div>
-    </div>
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
         <![endif]-->
@@ -40,6 +37,8 @@
         <script src="scripts/vendor/backbone-min.js"></script>
         <script data-main="scripts/main.js" src="scripts/vendor/require.js"></script>
         <!-- endbuild -->
+
+
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
